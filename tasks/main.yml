@@ -51,6 +51,16 @@
     mode: 0755
   tags: dhcp
 
+- name: Install keys file
+  template:
+    src: keys.conf.j2
+    dest: "{{ dhcp_config_dir }}/keys.conf"
+    owner: root
+    group: root
+    mode: 0640
+  notify: restart dhcp
+  tags: dhcp
+
 - name: Install config file
   template:
     src: etc_dhcp_dhcpd.conf.j2

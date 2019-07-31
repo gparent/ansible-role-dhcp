@@ -39,6 +39,7 @@ See the [dhcp-options(5)](http://linux.die.net/man/5/dhcp-options) man page for 
 | `dhcp_global_filename`            | Filename to request for boot                                           |
 | `dhcp_global_includes_missing`    | Boolean.  Continue if `includes` file(s) missing from role's files/    |
 | `dhcp_global_includes`            | List of config files to be included (from `dhcp_config_dir`)           |
+| `dhcp_global_keys`                | List of key entries to be written to `dhcp_config_dir/keys.conf`       |
 | `dhcp_global_log_facility`        | Global log facility (e.g. `daemon`, `syslog`, `user`, ...)             |
 | `dhcp_global_max_lease_time`      | Maximum lease time in seconds                                          |
 | `dhcp_global_next_server`         | IP for PXEboot server                                                  |

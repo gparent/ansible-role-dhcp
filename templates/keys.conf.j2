@@ -1,0 +1,18 @@
+{{ ansible_managed | comment }}
+
+{% if dhcp_global_omapi_secret is defined %}
+# OMAPI
+key omapi_key {
+    algorithm HMAC-MD5;
+    secret "{{ dhcp_global_omapi_secret }}";
+};
+{% endif %}
+{% if dhcp_global_keys is defined %}
+# Global keys
+{% for key in dhcp_global_keys %}
+key {{ key.name }} {
+    algorithm {{ key.algorithm }};
+    secret "{{ key.secret }}";
+};
+{% endfor %}
+{% endif %}
