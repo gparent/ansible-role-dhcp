@@ -207,6 +207,11 @@ option ntp-servers {{ subnet.ntp_servers }};
 option ntp-servers {{ subnet.ntp_servers|join(', ') }};
 {% endif %}
 {% endif %}
+{% if subnet.other_options is defined %}
+{% for option in subnet.other_options %}
+  option {{ option.name }} {{ option.value }};
+{% endfor %}
+{% endif %}
 {% if subnet.range_begin is defined and subnet.range_end is defined %}
   range {{ subnet.range_begin }} {{ subnet.range_end }};
 {% endif %}
