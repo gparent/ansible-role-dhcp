@@ -4,6 +4,18 @@ This file contains all notable changes to the dhcp Ansible role.
 
 This file adheres to the guidelines of [http://keepachangelog.com/](http://keepachangelog.com/). Versioning follows [Semantic Versioning](http://semver.org/).
 
+## 3.1.0 - 2020-12-31
+
+### Added
+
+- Added ddns-update-style
+- Added keys
+- Added custom options in subnets
+
+### Changed
+
+- Moved omapi key to a private file
+
 ## 3.0.3 - 2020-05-06
 
 ### Added
