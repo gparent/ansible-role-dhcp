@@ -4,6 +4,12 @@ This file contains all notable changes to the dhcp Ansible role.
 
 This file adheres to the guidelines of [http://keepachangelog.com/](http://keepachangelog.com/). Versioning follows [Semantic Versioning](http://semver.org/).
 
+## 3.1.1 - 2020-12-31
+
+### Added
+
+- Added role_name
+
 ## 3.1.0 - 2020-12-31
 
 ### Added
